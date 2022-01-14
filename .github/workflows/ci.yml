@@ -20,6 +20,7 @@ jobs:
 
       - name: Install and Build
         run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.YYY }}" > ~/.npmrc
           npm install
           npm run build
         env:
