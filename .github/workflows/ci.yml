@@ -16,14 +16,13 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: https://registry.npmjs.org/
-          cache: "npm"
+          scope: getify
 
       - name: Install and Build
         run: |
           npm install
           npm run build
         env:
-          NPM_CONFIG_USERCONFIG: ~/.npmrc
           NODE_AUTH_TOKEN: ${{ secrets.YYY }}
 
       - name: Deploy
