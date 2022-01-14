@@ -23,7 +23,7 @@ jobs:
           npm install
           npm run build
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.YYY }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
