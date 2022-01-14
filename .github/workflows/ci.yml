@@ -18,9 +18,12 @@ jobs:
         with:
           node-version: '16'
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: yarn install
-      - run: yarn build
+
+      - name: Install and Build
+        run: |
+          npm config set registry https://registry.npmjs.org/
+          npm install
+          npm run-script build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.XXX }}
 
