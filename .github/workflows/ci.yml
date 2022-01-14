@@ -23,6 +23,7 @@ jobs:
           npm install
           npm run build
         env:
+          NPM_CONFIG_USERCONFIG: ~/.npmrc
           NODE_AUTH_TOKEN: ${{ secrets.YYY }}
 
       - name: Deploy
